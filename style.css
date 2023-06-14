@@ -1,0 +1,18 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contactme{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.social__icons{
+    height: 24px;
+    transition: .2s ease;
+}
+
+.social__icons:hover{
+    transform: scale(120%);
+}
