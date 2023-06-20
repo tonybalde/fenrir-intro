@@ -9,8 +9,8 @@
     <title>Tony Baldessari</title>
 </head>
 <body>
-    <h1>Tony Baldessari</h1>
     <section id="about_me">
+        <h1>Tony Baldessari</h1>
         <h2>About Me</h2>
         <p>Hi!👋 I'm Tony, a Front End Developer based in Buenos Aires, Argentina</p>
         <ul><h3>Stuff I like to do:</h3>
@@ -37,8 +37,26 @@
             Contact me at: <a href="mailto:tonybalde@hotmail.com"><img src="./img/mail.png" alt="mail" class="social__icons"></a> | <a href="http://www.github.com/tonybalde" target="_blank" rel="noopener noreferrer"><img src="./img/github.png" class="social__icons" alt=""></a> | <a href="http://www.instagram.com/tonybaldev" target="_blank" rel="noopener noreferrer"><img src="./img/instagram.png" class="social__icons" alt="Instagram"></a> | <a href="http://www.twitter.com/tonybaldev" target="_blank" rel="noopener noreferrer"><img src="./img/twitter.png" class="social__icons" alt=""></a>
         </div>
     </section>
-    <footer>
+    <section>
+        <h2>Leave a Message</h2>
+        <form name="leave_message">
+            <label for="usersName">Name:</label>
+            <input type="text" name="usersName" id="user_name" placeholder="Your Name" required>
+            <label for="usersEmail">E-mail:</label>
+            <input type="email" name="usersEmail" id="" placeholder="your@email.com"  required>
+            <label for="usersMessage">Message:</label>
+            <textarea name="usersMessage" id="" placeholder="Write a message" required></textarea>
+            <button type="submit" id="submit_btn">Submit</button>
+        </form>
+    </section>
+    <section id="messages" hidden> <!-- to hide the section when no message-->
+        <div class="messages_list">
+            <h2>Messages:</h2>
+            <ul></ul>
+        </div>
+    </section>
 
+    <footer>
     </footer>
     <script src="./js/index.js"></script>
 </body>
