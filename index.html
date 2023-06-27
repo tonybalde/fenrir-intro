@@ -1,63 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Tony Baldessari's Portfolio">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/index.css">
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
     <title>Tony Baldessari</title>
 </head>
-<body>
-    <section id="about_me">
-        <h1>Tony Baldessari</h1>
-        <h2>About Me</h2>
-        <p>Hi!👋 I'm Tony, a Front End Developer based in Buenos Aires, Argentina</p>
-        <ul><h3>Stuff I like to do:</h3>
-            <li>🎞Watching movies and tv-shows </li>
-            <li>🧮Reading books</li>
-            <li>🎮Play videogames</li>
-        </ul>
-    </section>
-    <section id="experience">
-        <h2>Experience</h2>
-        <h3>Projects</h3>
-        <div>
-            <p>Project Name</p>
-            <p>Description</p>
-        </div>
-    </section>
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul></ul>
-    </section>
-    <section id="contact_me">
-        <h2>Connect</h2>
-        <div class="contactme">
-            Contact me at: <a href="mailto:tonybalde@hotmail.com"><img src="./img/mail.png" alt="mail" class="social__icons"></a> | <a href="http://www.github.com/tonybalde" target="_blank" rel="noopener noreferrer"><img src="./img/github.png" class="social__icons" alt=""></a> | <a href="http://www.instagram.com/tonybaldev" target="_blank" rel="noopener noreferrer"><img src="./img/instagram.png" class="social__icons" alt="Instagram"></a> | <a href="http://www.twitter.com/tonybaldev" target="_blank" rel="noopener noreferrer"><img src="./img/twitter.png" class="social__icons" alt=""></a>
-        </div>
-    </section>
-    <section>
-        <h2>Leave a Message</h2>
-        <form name="leave_message">
-            <label for="usersName">Name:</label>
-            <input type="text" name="usersName" id="user_name" placeholder="Your Name" required>
-            <label for="usersEmail">E-mail:</label>
-            <input type="email" name="usersEmail" id="" placeholder="your@email.com"  required>
-            <label for="usersMessage">Message:</label>
-            <textarea name="usersMessage" id="" placeholder="Write a message" required></textarea>
-            <button type="submit" id="submit_btn">Submit</button>
-        </form>
-    </section>
-    <section id="messages" hidden> <!-- to hide the section when no message-->
-        <div class="messages_list">
-            <h2>Messages:</h2>
-            <ul></ul>
-        </div>
-    </section>
 
-    <footer>
-    </footer>
+<body>
+
+
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo-name">
+                    <img src="./img/tony.png" alt="Tony Baldessari" class="profile">
+                    <a href="#" class="nav-branding">Tony Baldessari</a>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#experience" class="nav-link">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#skills" class="nav-link">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact_me" class="nav-link">Connect</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="">
+        <section id="about_me">
+            <h2>About Me</h2>
+            <p>Hi!👋 I'm Tony, a Front End Developer based in Buenos Aires, Argentina</p>
+            <ul>
+                <h3 class="stuff_i_do">Stuff I like to do:</h3>
+                <li>🎞Watching movies and tv-shows</li>
+                <li>🧮 Reading books</li>
+                <li>🎮 Play videogames</li>
+            </ul>
+        </section>
+        <section id="experience">
+            <h2>Experience</h2>
+            <h3 class="project_title">Projects</h3>
+            <div class="projects_container">
+                <div class="project_card">
+                    <div class="project_card_left">
+                        <p class="project_name">Project One</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicin..</p>
+                        <div class="project-links">
+                            <div class="live-repo">
+                                <a href="#" class="links_to_projects" target="_blank"><img src="./img/web.svg" class="icon_repo" alt=""> live</a>
+                            </div>
+                            <div class="live-code">
+                                <a href="#" class="links_to_projects" target="_blank"><img src="./img/github.svg" class="icon_repo" alt=""> repo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project_card-left">
+                        <img src="./img/project-preview.png" class="project_preview_image" alt="project preview">
+                    </div>
+                </div>
+
+                <div class="project_card">
+                    <div class="project_card_left">
+                        <p class="project_name">Project Two</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio a qui quo quibusdam soluta voluptate impedit and more stuff to add..</p>
+                        <div class="project-links">
+                            <div class="live-repo">
+                                <a href="#" class="links_to_projects" target="_blank"><img src="./img/web.svg" class="icon_repo" alt=""> live</a>
+                            </div>
+                            <div class="live-code">
+                                <a href="#" class="links_to_projects" target="_blank"><img src="./img/github.svg" class="icon_repo" alt=""> repo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project_card-left">
+                        <img src="./img/project-preview.png" class="project_preview_image" alt="project preview">
+                    </div>
+                </div>
+                <div class="project_card">
+                    <div class="project_card_left">
+                        <p class="project_name">Project Three</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit and more stuff to add..</p>
+                        <div class="project-links">
+                            <div class="live-repo">
+                                <a href="#" class="links_to_projects" target="_blank"><img src="./img/web.svg" class="icon_repo" alt=""> live</a>
+                            </div>
+                            <div class="live-code">
+                                <a href="#" class="links_to_projects" target="_blank"><img src="./img/github.svg" class="icon_repo" alt=""> repo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project_card-left">
+                        <img src="./img/project-preview.png" class="project_preview_image" alt="project preview">
+                    </div>
+                </div>
+                <div class="project_card">
+                    <div class="project_card_left">
+                        <p class="project_name">Project Four</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio a qui quo quibusdam soluta voluptate impedit and more stuff to add in the future..</p>
+                        <div class="project-links">
+                            <div class="live-repo">
+                                <a href="#" class="links_to_projects" target="_blank"><img src="./img/web.svg" class="icon_repo" alt=""> live</a>
+                            </div>
+                            <div class="live-code">
+                                <a href="#" class="links_to_projects" target="_blank"><img src="./img/github.svg" class="icon_repo" alt=""> repo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project_card-left">
+                        <img src="./img/project-preview.png" class="project_preview_image" alt="project preview">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul></ul>
+        </section>
+        <section id="contact_me">
+
+            <h2>Connect</h2>
+            <div class="contactme">
+                Contact me at: <a href="mailto:tonybalde@hotmail.com"><img src="./img/mail.png" alt="mail"
+                        class="social__icons"></a> | <a href="http://www.github.com/tonybalde" target="_blank"
+                    rel="noopener noreferrer"><img src="./img/github.png" class="social__icons" alt=""></a> | <a
+                    href="http://www.instagram.com/tonybaldev" target="_blank" rel="noopener noreferrer"><img
+                        src="./img/instagram.png" class="social__icons" alt="Instagram"></a> | <a
+                    href="http://www.twitter.com/tonybaldev" target="_blank" rel="noopener noreferrer"><img
+                        src="./img/twitter.png" class="social__icons" alt=""></a>
+            </div>
+
+        </section>
+        <section id="messages_secion">
+            <h2>Leave a Message</h2>
+            <form name="leave_message" class="form">
+                <label for="usersName">Name:</label>
+                <input type="text" name="usersName" id="user_name" placeholder="Your Name" required>
+                <label for="usersEmail">E-mail:</label>
+                <input type="email" name="usersEmail" id="" placeholder="your@email.com" required>
+                <label for="usersMessage">Message:</label>
+                <textarea name="usersMessage" id="" placeholder="Write a message" required></textarea>
+                <button type="submit" id="submit_btn">Submit</button>
+            </form>
+        </section>
+        <section id="messages" hidden> <!-- to hide the section when no message-->
+            <div class="messages_list">
+                <h2>Messages:</h2>
+                <ul></ul>
+            </div>
+        </section>
+
+        <footer>
+        </footer>
+    </main>
+
+
     <script src="./js/index.js"></script>
 </body>
+
 </html>

@@ -68,51 +68,50 @@ messageForm.addEventListener("submit", function (event) {
   }
 
   const removeButton = document.createElement("button");
-  removeButton.innerText = "remove";
+  removeButton.innerText = "Remove";
   removeButton.type = "button";
-
-  const editButton = document.createElement("button");
-  editButton.innerText = "edit";
-  editButton.type = "button";
-
+  removeButton.setAttribute('class', 'remove-btn');
   
-editButton.addEventListener('click', function() {
-  const messageText = newMessage.querySelector('span');
-  const messageTextInput = document.createElement('input');
-  messageTextInput.type = 'text';
-  messageTextInput.value = messageText.innerText;
+  const editButton = document.createElement("button");
+  editButton.innerText = "Edit";
+  editButton.type = "button";
+  editButton.setAttribute('class', 'edit-btn');
 
-  // Replace the message text with the input field
-  newMessage.replaceChild(messageTextInput, messageText);
+  editButton.addEventListener("click", function () {
+    const messageText = newMessage.querySelector("span");
+    const messageTextInput = document.createElement("input");
+    messageTextInput.type = "text";
+    messageTextInput.value = messageText.innerText;
 
-  // Set focus on the input field
-  messageTextInput.focus();
+    // Replace the message text with the input field
+    newMessage.replaceChild(messageTextInput, messageText);
 
-  // Function to handle saving the updated message
-  function saveMessage() {
-    const updatedMessage = document.createElement('span');
-    updatedMessage.innerText = messageTextInput.value;
+    // Set focus on the input field
+    messageTextInput.focus();
 
-    // Replace the input field with the updated message
-    newMessage.replaceChild(updatedMessage, messageTextInput);
+    // Function to handle saving the updated message
+    function saveMessage() {
+      const updatedMessage = document.createElement("span");
+      updatedMessage.innerText = messageTextInput.value;
 
-    // Re-enable the edit button
-    editButton.disabled = false;
-  }
+      // Replace the input field with the updated message
+      newMessage.replaceChild(updatedMessage, messageTextInput);
 
-  // Event listener for input field keydown
-  messageTextInput.addEventListener('keydown', function(event) {
-    if (event.key === 'Enter') {
-      event.preventDefault();
-      saveMessage();
+      // Re-enable the edit button
+      editButton.disabled = false;
     }
+
+    // Event listener for input field keydown
+    messageTextInput.addEventListener("keydown", function (event) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        saveMessage();
+      }
+    });
+
+    // Disable the edit button while editing the message
+    editButton.disabled = true;
   });
-
-  // Disable the edit button while editing the message
-  editButton.disabled = true;
-});
-
-
 
   removeButton.addEventListener("click", function () {
     // Event handling code goes here
@@ -132,3 +131,19 @@ editButton.addEventListener('click', function() {
 
   // You can perform further actions with the form field values here
 });
+
+// NAVBAR BURGER MENU
+
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+});
+
+document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+  hamburger.classList.remove("active");
+  navMenu.classList.remove("active");
+}));
+
