@@ -1,5 +1,5 @@
 * {
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   box-sizing: border-box;
   transition: 0.4s ease all;
   padding: 0;
@@ -19,19 +19,19 @@ header {
   width: 100vw;
 }
 
-main{
-	padding-top: 5rem;
+main {
+  padding-top: 5rem;
 }
 
-.logo-name{
-	display: flex;
-	align-items: center;
-	font-weight: 700;
-	gap: 8px;
+.logo-name {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  gap: 8px;
 }
 
-.profile{
-	height: 4rem;
+.profile {
+  height: 4rem;
 }
 
 li {
@@ -39,7 +39,7 @@ li {
 }
 
 a {
-  color:#fff;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -88,13 +88,12 @@ a {
 
 /* SECTIONS */
 
-
-#about_me{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	gap: 1.45rem;
+#about_me {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.45rem;
 }
 
 #about_me > ul > li {
@@ -102,124 +101,126 @@ a {
   padding-bottom: 12px;
 }
 
-#about_me, #skills{
-	background-color: #444;
-	color:#fff;
-	padding-top: 5rem;
-	padding-bottom: 5rem;
+#about_me,
+#skills {
+  background-color: #444;
+  color: #fff;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
-#experience, #contact_me{
-	background-color: #666;
-	color: #111;
-	padding-top: 5rem;
-	padding-bottom: 5rem;
+#experience,
+#contact_me {
+  background-color: #666;
+  color: #111;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
-#contact_me, #skills{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+#contact_me,
+#skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-#experience, #about_me{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+#experience,
+#about_me {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-
-section{
-	padding: 10px;
+section {
+  padding: 10px;
 }
 
 section > h2 {
-	padding-bottom: 12px;
+  padding-bottom: 12px;
 }
 
-.stuff{
-	padding-top: 12px;
-	padding-bottom: 12px;
+.stuff {
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
-.stuff_i_do{
+.stuff_i_do {
   padding-bottom: 1rem;
 }
 
 #skills > ul {
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	gap: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 #skills > ul > li {
-	border: 2px solid #111;
-	padding: 8px;
-	border-radius: 5px;
+  border: 2px solid #111;
+  padding: 8px;
+  border-radius: 5px;
 }
 
 #skills > ul > li:hover {
-	background-color: #111;
-	color:#fff;
+  background-color: #111;
+  color: #fff;
 }
 
-.projects_container{
-	display: flex;
-	gap: 12px;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
+.projects_container {
+  display: flex;
+  gap: 12px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.project_title{
-	padding-bottom: 12px;
+.project_title {
+  padding-bottom: 12px;
 }
 
-.project_card{
-	padding: 8px;
-	display: flex;
+.project_card {
+  padding: 8px;
+  display: flex;
   justify-content: space-between;
-	width: 400px;
-	border: 1px solid #111;
-	border-radius: 5px;
+  width: 400px;
+  border: 1px solid #111;
+  border-radius: 5px;
 }
 
-.project_card_left{
+.project_card_left {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding-right: 8px;
 }
 
-.project_name{
-	font-weight: 500;
+.project_name {
+  font-weight: 500;
 }
 
-.project-links{
+.project-links {
   padding-top: 8px;
-	display: flex;
+  display: flex;
   justify-content: center;
-	align-items: center;
-	gap: 8px;
+  align-items: center;
+  gap: 8px;
 }
 
-
-.project_preview_image{
+.project_preview_image {
   height: 180px;
   border-radius: 5px;
 }
 
-.icon_repo{
+.icon_repo {
   height: 24px;
 }
 
-.links_to_projects{
+.links_to_projects {
   display: flex;
   gap: 8px;
-	color:#111;
+  color: #111;
 }
 
 .links_to_projects:hover {
@@ -242,11 +243,11 @@ section > h2 {
   transform: scale(120%);
 }
 
-#messages_secion{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+#messages_secion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .form {
@@ -262,7 +263,7 @@ input {
   height: 28px;
 }
 
-::placeholder{
+::placeholder {
   padding: 8px;
 }
 
@@ -294,36 +295,72 @@ textarea {
   justify-content: space-around;
 }
 
-#messages{
-	display: flex;
-	flex-direction: column;
+#messages {
+  display: flex;
+  flex-direction: column;
+}
+
+.messages-h2{
+  margin-bottom: 2rem;
 }
 
 .messages_list > ul > li {
-	display: flex;
+  display: flex;
   justify-content: space-between;
-	gap: 8px;
+  gap: 8px;
 }
 
-.edit-btn, .remove-btn{
+.user_mail{
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.users-messages-list{
+  display: flex;
+  width: 90vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-messages-li{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  
+  
+
+}
+
+
+.edit-btn,
+.remove-btn {
   width: 100px;
   height: 32px;
   border: 1px solid #222;
-
 }
 
-.edit-btn{
+.edit-btn {
   background-color: rgb(68, 255, 146);
 }
 
-.edit-btn:hover{
-  color:#111;
+.edit-btn:hover {
+  color: #111;
   font-weight: 700;
   border: 2px solid #111;
 }
 
-.remove-btn{
+.remove-btn {
   background-color: rgb(255, 52, 52);
+}
+
+.remove-btn:hover {
+  color: #111;
+  font-weight: 700;
+  border: 2px solid #111;
 }
 
 footer {
@@ -334,6 +371,36 @@ footer {
 }
 
 /* RESPONSIVE  MEDIA QUERIES */
+
+@media screen and (min-width:280px) and (max-width: 500px){
+
+  .presentation_p{
+    display: flex;
+    text-align: center;
+    
+  }
+
+  .project_card {
+    width: 95vw;
+  }
+
+  .project_card_left, .project_card_right{
+    width: 47vw;
+  }
+
+  .project_card_right{
+    display: flex;
+    justify-content: center;
+    
+  }
+
+  .project_preview_image {
+    width: 100px;
+    height: 80px;
+    
+
+  }
+}
 
 @media (max-width: 1024px) {
   .hamburger {
@@ -365,4 +432,19 @@ footer {
   .nav-menu.active {
     left: 0;
   }
+}
+
+@media screen and (min-width: 1025px){
+
+  
+
+  .project_card {
+    width: 600px;
+  }
+
+  .project_preview_image {
+    height: 250px;
+  }
+
+
 }

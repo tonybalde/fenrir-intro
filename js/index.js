@@ -40,10 +40,12 @@ messageForm.addEventListener("submit", function (event) {
 
   const messageSection = document.getElementById("messages");
   const messageList = messageSection.querySelector("ul");
+  messageList.setAttribute('class', 'users-messages-list');
 
   let newMessage = document.createElement("li");
+  newMessage.setAttribute('class', 'new-messages-li');
   newMessage.innerHTML = `
-  <a href="mailto:${usersEmail}">${usersName}</a>
+  <a href="mailto:${usersEmail}" class="user_mail">${usersName}</a>
   <span>${usersMessage}</span>
 `;
 
