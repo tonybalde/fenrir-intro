@@ -161,30 +161,29 @@ githubRequest.addEventListener("load", function(event) {
 
   const projectSection = document.querySelector("#projects");
   const projectList = projectSection.querySelector("ul");
-  let repository = repositories;
 
   for (let i = 0; i < repositories.length; i++) {
     const repository = repositories[i];
 
     // Create an <a> tag for each repository with a link to its GitHub page (html_url).
-    let projectLink = document.createElement("a");
+    const projectLink = document.createElement("a");
     projectLink.classList.add("project-link");
     projectLink.href = repository.html_url;
     projectLink.target = "_blank";
     projectLink.innerText = repository.name;
 
     // Create a <p> tag to display the description.
-    let descriptionParagraph = document.createElement("p");
+    const descriptionParagraph = document.createElement("p");
     descriptionParagraph.classList.add("project-description");
     descriptionParagraph.innerText = repository.description || "No description provided.";
 
     // Create a <p> tag to display the creation date (updated_at).
-    let dateParagraph = document.createElement("p");
+    const dateParagraph = document.createElement("p");
     dateParagraph.classList.add("project-date");
     dateParagraph.innerText = "Last Updated: " + new Date(repository.updated_at).toLocaleDateString();
 
     // Create a <li> element to hold the <a> tag and the <p> tags, and append it to the list.
-    let project = document.createElement("li");
+    const project = document.createElement("li");
     project.classList.add("project-list");
     project.appendChild(projectLink);
     project.appendChild(descriptionParagraph);
