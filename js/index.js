@@ -1,5 +1,5 @@
 const today = new Date();
-let thisYear = today.getFullYear(); // output: "2023"
+let thisYear = today.getFullYear(); 
 
 let footer = document.querySelector("footer");
 let copyright = document.createElement("p");
@@ -31,12 +31,6 @@ messageForm.addEventListener("submit", function (event) {
   const usersName = messageForm.usersName.value;
   const usersEmail = messageForm.usersEmail.value;
   const usersMessage = messageForm.usersMessage.value;
-
-  // Log the form field values for TESTING
-  console.log("Name:", usersName);
-  console.log("E-mail:", usersEmail);
-  console.log("Message:", usersMessage);
-  // Later with the final project DELETE THOSE CONSOLE.LOG ABOVE!!!!!
 
   const messageSection = document.getElementById("messages");
   const messageList = messageSection.querySelector("ul");
@@ -148,4 +142,61 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
   hamburger.classList.remove("active");
   navMenu.classList.remove("active");
 }));
+
+// CODE TO RETRIEVE REPOS LINKS
+
+const githubRequest = new XMLHttpRequest();
+githubRequest.open("GET", "https://api.github.com/users/tonybalde/repos");
+
+// Adding a "load" event listener with the necessary arguments: "event" and "callback" function.
+githubRequest.addEventListener("load", function(event) {
+
+  let repositories = {};
+
+  if (githubRequest.status === 200) {
+    repositories = JSON.parse(githubRequest.response);
+  } else {
+    console.error("Request failed with status:", githubRequest.status);
+  }
+
+  const projectSection = document.querySelector("#projects");
+  const projectList = projectSection.querySelector("ul");
+  let repository = repositories;
+
+  for (let i = 0; i < repositories.length; i++) {
+    const repository = repositories[i];
+
+    // Create an <a> tag for each repository with a link to its GitHub page (html_url).
+    let projectLink = document.createElement("a");
+    projectLink.classList.add("project-link");
+    projectLink.href = repository.html_url;
+    projectLink.target = "_blank";
+    projectLink.innerText = repository.name;
+
+    // Create a <p> tag to display the description.
+    let descriptionParagraph = document.createElement("p");
+    descriptionParagraph.classList.add("project-description");
+    descriptionParagraph.innerText = repository.description || "No description provided.";
+
+    // Create a <p> tag to display the creation date (updated_at).
+    let dateParagraph = document.createElement("p");
+    dateParagraph.classList.add("project-date");
+    dateParagraph.innerText = "Last Updated: " + new Date(repository.updated_at).toLocaleDateString();
+
+    // Create a <li> element to hold the <a> tag and the <p> tags, and append it to the list.
+    let project = document.createElement("li");
+    project.classList.add("project-list");
+    project.appendChild(projectLink);
+    project.appendChild(descriptionParagraph);
+    project.appendChild(dateParagraph);
+    projectList.appendChild(project);
+  }
+
+});
+
+githubRequest.send();
+
+
+
+
 

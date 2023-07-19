@@ -101,16 +101,14 @@ a {
   padding-bottom: 12px;
 }
 
-#about_me,
-#skills {
+#about_me, #projects {
   background-color: #444;
   color: #fff;
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
 
-#experience,
-#contact_me {
+#contact_me, #skills {
   background-color: #666;
   color: #111;
   padding-top: 5rem;
@@ -125,12 +123,22 @@ a {
   align-items: center;
 }
 
-#experience,
+#projects,
 #about_me {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.project-list{
+  padding: 8px;
+  list-style:disc;
+}
+
+.project-link{
+  font-weight: 700;
+  font-size: 18px;
 }
 
 section {
