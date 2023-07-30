@@ -143,58 +143,49 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
   navMenu.classList.remove("active");
 }));
 
-// CODE TO RETRIEVE REPOS LINKS
+// Fetching data using the Fetch API
+fetch("https://api.github.com/users/tonybalde/repos")
+  .then(response => {
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+    return response.json();
+  })
+  .then(repositories => {
+    const projectSection = document.querySelector("#projects");
+    const projectList = projectSection.querySelector("ul");
 
-const githubRequest = new XMLHttpRequest();
-githubRequest.open("GET", "https://api.github.com/users/tonybalde/repos");
+    for (const repository of repositories) {
+      // Create an <a> tag for each repository with a link to its GitHub page (html_url).
+      const projectLink = document.createElement("a");
+      projectLink.classList.add("project-link");
+      projectLink.href = repository.html_url;
+      projectLink.target = "_blank";
+      projectLink.innerText = repository.name;
 
-// Adding a "load" event listener with the necessary arguments: "event" and "callback" function.
-githubRequest.addEventListener("load", function(event) {
+      // Create a <p> tag to display the description.
+      const descriptionParagraph = document.createElement("p");
+      descriptionParagraph.classList.add("project-description");
+      descriptionParagraph.innerText = repository.description || "No description provided.";
 
-  let repositories = {};
+      // Create a <p> tag to display the creation date (updated_at).
+      const dateParagraph = document.createElement("p");
+      dateParagraph.classList.add("project-date");
+      dateParagraph.innerText = "Last Updated: " + new Date(repository.updated_at).toLocaleDateString();
 
-  if (githubRequest.status === 200) {
-    repositories = JSON.parse(githubRequest.response);
-  } else {
-    console.error("Request failed with status:", githubRequest.status);
-  }
-
-  const projectSection = document.querySelector("#projects");
-  const projectList = projectSection.querySelector("ul");
-
-  for (let i = 0; i < repositories.length; i++) {
-    const repository = repositories[i];
-
-    // Create an <a> tag for each repository with a link to its GitHub page (html_url).
-    const projectLink = document.createElement("a");
-    projectLink.classList.add("project-link");
-    projectLink.href = repository.html_url;
-    projectLink.target = "_blank";
-    projectLink.innerText = repository.name;
-
-    // Create a <p> tag to display the description.
-    const descriptionParagraph = document.createElement("p");
-    descriptionParagraph.classList.add("project-description");
-    descriptionParagraph.innerText = repository.description || "No description provided.";
-
-    // Create a <p> tag to display the creation date (updated_at).
-    const dateParagraph = document.createElement("p");
-    dateParagraph.classList.add("project-date");
-    dateParagraph.innerText = "Last Updated: " + new Date(repository.updated_at).toLocaleDateString();
-
-    // Create a <li> element to hold the <a> tag and the <p> tags, and append it to the list.
-    const project = document.createElement("li");
-    project.classList.add("project-list");
-    project.appendChild(projectLink);
-    project.appendChild(descriptionParagraph);
-    project.appendChild(dateParagraph);
-    projectList.appendChild(project);
-  }
-
-});
-
-githubRequest.send();
-
+      // Create a <li> element to hold the <a> tag and the <p> tags, and append it to the list.
+      const project = document.createElement("li");
+      project.classList.add("project-list");
+      project.appendChild(projectLink);
+      project.appendChild(descriptionParagraph);
+      project.appendChild(dateParagraph);
+      projectList.appendChild(project);
+    }
+  })
+  .catch(error => {
+    // If an error occurs during the fetch process
+    console.error("Error fetching data:", error);
+  });
 
 
 
