@@ -161,7 +161,23 @@ fetch("https://api.github.com/users/tonybalde/repos")
       projectLink.classList.add("project-link");
       projectLink.href = repository.html_url;
       projectLink.target = "_blank";
-      projectLink.innerText = repository.name;
+      
+      // Add a Link to the title of the repo
+
+      const projectName = document.createElement("span");
+      projectName.innerText = repository.name;
+
+      const iconImg = document.createElement("img");
+      const iconUrl = "./img/link.svg";
+      iconImg.src = iconUrl;
+      iconImg.alt = "Project Icon";
+
+      projectLink.appendChild(iconImg);
+      projectLink.appendChild(projectName);
+
+      //
+
+
 
       // Create a <p> tag to display the description.
       const descriptionParagraph = document.createElement("p");
