@@ -96,6 +96,46 @@ a {
   gap: 1.45rem;
 }
 
+#experience{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.experience-title{
+  margin-bottom: 2rem;
+}
+
+.experience-container{
+  display: flex;
+  flex-direction: column;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  gap: 8px;
+}
+
+.experience-card{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.company{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.presentation_p{
+  display: flex;
+  text-align: center;
+  line-height: 2rem; 
+  font-size: 1rem;
+}
+
 #about_me > ul > li {
   padding-top: 12px;
   padding-bottom: 12px;
@@ -177,7 +217,7 @@ section > h2 {
 }
 
 .stuff_i_do {
-  padding-bottom: 1rem;
+  padding-top: 1rem;
 }
 
 #skills > ul {
@@ -393,6 +433,62 @@ footer {
 
 @media screen and (min-width:280px) and (max-width: 500px){
 
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #262626;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+  .nav-item {
+    margin: 16px 0;
+  }
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .experience-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+   
+  }
+  
+  .experience-card{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .company{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    gap: 8px;
+  }
+
+  
   .presentation_p{
     display: flex;
     text-align: center;
