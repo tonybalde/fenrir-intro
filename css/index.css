@@ -55,6 +55,7 @@ a {
   justify-content: space-between;
   align-items: center;
   font-size: 1.5rem;
+  
 }
 .nav-branding {
   font-size: 2rem;
@@ -94,6 +95,46 @@ a {
   justify-content: center;
   align-items: center;
   gap: 1.45rem;
+}
+
+#experience{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.experience-title{
+  margin-bottom: 2rem;
+}
+
+.experience-container{
+  display: flex;
+  flex-direction: column;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  gap: 8px;
+}
+
+.experience-card{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.company{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.presentation_p{
+  display: flex;
+  text-align: center;
+  line-height: 2rem; 
+  font-size: 1rem;
 }
 
 #about_me > ul > li {
@@ -136,9 +177,31 @@ a {
   list-style:disc;
 }
 
+.projects-container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.projects-container > li {
+  list-style: none;
+  border: 2px solid #222;
+  background-color: #111;
+  border-radius: 12px;
+  width: 100%;
+}
+
+.projects-container > li:hover{
+  border: 2px solid #FFF;
+}
+
 .project-link{
   font-weight: 700;
   font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
 section {
@@ -155,7 +218,7 @@ section > h2 {
 }
 
 .stuff_i_do {
-  padding-bottom: 1rem;
+  padding-top: 1rem;
 }
 
 #skills > ul {
@@ -174,14 +237,6 @@ section > h2 {
 #skills > ul > li:hover {
   background-color: #111;
   color: #fff;
-}
-
-.projects_container {
-  display: flex;
-  gap: 12px;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
 .project_title {
@@ -338,9 +393,6 @@ textarea {
   align-items: center;
   text-align: center;
   padding: 1rem;
-  
-  
-
 }
 
 
@@ -382,6 +434,63 @@ footer {
 
 @media screen and (min-width:280px) and (max-width: 500px){
 
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #262626;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+  .nav-item {
+    margin: 16px 0;
+  }
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .experience-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+   
+  }
+  
+  .experience-card{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .company{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    gap: 8px;
+  }
+
+  
   .presentation_p{
     display: flex;
     text-align: center;
@@ -405,12 +514,14 @@ footer {
   .project_preview_image {
     width: 100px;
     height: 80px;
-    
+  }
 
+  .projects-container > li {
+    width: 100%;
   }
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 501px) and (max-width: 1023px) {
   .hamburger {
     display: block;
   }
@@ -440,6 +551,11 @@ footer {
   .nav-menu.active {
     left: 0;
   }
+
+  .projects-container > li {
+    width: 40%;
+  }
+
 }
 
 @media screen and (min-width: 1025px){
@@ -454,5 +570,8 @@ footer {
     height: 250px;
   }
 
+  .projects-container > li {
+    width: 30%;
+  }
 
 }
